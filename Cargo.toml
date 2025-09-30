@@ -144,3 +144,6 @@ is_ci = "1.2.0"
 
 [profile.release]
 debug = false # Set this to true when using `sudo cargo flamegraph`
+
+[target."x86_64-unknown-linux-musl"]
+rustflags = ["-C", "target-feature=-crt-static"]
